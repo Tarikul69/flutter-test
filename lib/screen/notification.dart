@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 
 class notification extends StatelessWidget {
   const notification({super.key});
@@ -13,28 +13,37 @@ class notification extends StatelessWidget {
         height: 100,
         width: 350,
         child: Padding(
-          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
           child: Center(
             child: Column(
               children: [
                 Row(
-                  children: [
-                    Column(
                       children: [
-                          Text(title, style:TextStyle(fontWeight: FontWeight.bold, fontSize: 20,),),
-                          Text(title1, style: TextStyle(),),
-                          Text(date, style: TextStyle(),),          
+                        const SizedBox(width: 10,),
+                        Column(
+                          children: [
+                            Text(title, style:TextStyle(fontWeight: FontWeight.bold, fontSize: 20,),),
+                            Text(title1, style: TextStyle(),),
+                            Text(date, style: TextStyle(),), 
+                          ],
+                        ),
+                        const SizedBox(width: 200,),
+                        const Column(
+                          children: [
+                           Icon(Icons.remove_red_eye_outlined)
+                          ],
+                        ),
+                                  
                       ],
                     )
                   ],
                 )
-                ],
+                
             ),
         
           ),
         )
-      ),
-    );
+      );
   }
 
   @override
@@ -47,8 +56,12 @@ class notification extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
-                for(int i=0; i<10; i++)
-                notificationcart(title: "Title", title1: "title1", date: "09/20/2023")
+                Column(
+                  children: [
+                    for(int i=0; i<10; i++)
+                      notificationcart(title: "Title", title1: "title1", date: "09/20/2023")
+                  ],
+                ),
               ],
             ),
           ),

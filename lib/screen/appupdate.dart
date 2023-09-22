@@ -8,7 +8,18 @@ class appupdate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("App Update"),
+        title: const Text("App Update"),
+      ),
+      body: Row(
+        children: [
+          Center(
+             child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: ElevatedButton(onPressed: (){}, child: const Text("App Update"),
+              ),
+            )
+            )
+        ],
       ),
     );
   }

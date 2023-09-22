@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:test/Home.dart';
 import 'package:test/screen/about.dart';
 import 'package:test/screen/appupdate.dart';
 import 'package:test/screen/myorder.dart';
