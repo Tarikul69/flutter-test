@@ -54,7 +54,7 @@ Widget abcd({required String name,required IconData symble,required VoidCallback
             children: [
               const SizedBox(height: 30),
               const CircleAvatar(
-                backgroundImage: AssetImage('abjf/jufhu'), 
+                backgroundImage: NetworkImage("url"), 
                 radius: 70,
               ),
               const SizedBox(height: 5,),
