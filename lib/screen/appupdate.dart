@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test/drawer/drawer.dart';
 import 'package:test/screen/googlemap.dart';
 
 class appupdate extends StatelessWidget {
@@ -20,6 +21,17 @@ class appupdate extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: (){
                   Get.to(googlemap());
+                },
+                child: const Text("App Update"),
+              ),
+            )
+            ),
+            Center(
+             child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: ElevatedButton(
+                onPressed: (){
+                  Get.to(drawer());
                 },
                 child: const Text("App Update"),
               ),
