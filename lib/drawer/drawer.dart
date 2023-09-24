@@ -15,8 +15,8 @@ class drawer extends StatelessWidget {
           children: [
             const SizedBox(height: 40),
             ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text("Home"),
+              leading: const Icon(Icons.person),
+              title: const Text("Profile"),
               //child: Container(),
               onTap: (){
 
