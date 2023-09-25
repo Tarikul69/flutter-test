@@ -1,13 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:test/drawer/drawer.dart';
-import 'package:test/screen/about.dart';
-import 'package:test/screen/appupdate.dart';
-import 'package:test/screen/myorder.dart';
-import 'package:test/screen/notification.dart';
-import 'package:test/screen/product.dart';
-
+import 'package:test/drawer/drawer.dart'; 
 
  
 void main() {
@@ -17,26 +11,26 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
 //Card
-Widget abcd({required String name,required IconData symble,required VoidCallback myontap}) {
+// Widget abcd({required String name,required IconData symble,required VoidCallback myontap}) {
   
-   return Container(
-                decoration: const BoxDecoration(
-                  boxShadow: [
+//    return Container(
+//                 decoration: const BoxDecoration(
+//                   boxShadow: [
                     
-                  ]
-                ),
-                 child:  ListTile(
-                  title: InkWell(
-                    onTap: myontap,
-                    child: Text(name.toString(), style: const TextStyle(fontWeight: FontWeight.bold),
-                    )
-                      ),
-                  //subtitle: Text("data"),
-                  leading:  Icon(symble, color: Colors.grey,),
-                  trailing: const Icon(Icons.arrow_forward, color: Colors.grey,),
-                 ),
-               );
-}
+//                   ]
+//                 ),
+//                  child:  ListTile(
+//                   title: InkWell(
+//                     onTap: myontap,
+//                     child: Text(name.toString(), style: const TextStyle(fontWeight: FontWeight.bold),
+//                     )
+//                       ),
+//                   //subtitle: Text("data"),
+//                   leading:  Icon(symble, color: Colors.grey,),
+//                   trailing: const Icon(Icons.arrow_forward, color: Colors.grey,),
+//                  ),
+//                );
+// }
   @override
   Widget build(BuildContext context) {
     return   const GetMaterialApp(

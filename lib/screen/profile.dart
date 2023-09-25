@@ -115,20 +115,6 @@ Widget abcd({required String name,required IconData symble,required VoidCallback
                     }),
                    ),
                  ),
-                 Card(
-                   child: Container(
-                    child: abcd(name: "App Update", symble: CupertinoIcons.app_badge, myontap: (){
-                      Get.to(appupdate());
-                    }),
-                   ),
-                 ),
-                 Card(
-                   child: Container(
-                    child: abcd(name: "App Update", symble: CupertinoIcons.app_badge, myontap: (){
-                      Get.to(appupdate());
-                    }),
-                   ),
-                 ),
               ]  
             ),
           ),
