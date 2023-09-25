@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:test/screen/profile.dart';
 
 class drawer extends StatelessWidget {
   const drawer({super.key});
@@ -19,7 +21,7 @@ class drawer extends StatelessWidget {
               title: const Text("Profile"),
               //child: Container(),
               onTap: (){
-
+                Get.to(profile());
               },
             trailing: const Icon(CupertinoIcons.arrow_right),
             ),
