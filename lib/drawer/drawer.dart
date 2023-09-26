@@ -14,7 +14,6 @@ class drawer extends StatelessWidget {
       ),
       drawer: Drawer(
         child: Container(
-          color:  Colors.grey,
           child: ListView(
             children: [
               const SizedBox(height: 40),
@@ -27,7 +26,23 @@ class drawer extends StatelessWidget {
                 },
               trailing: const Icon(CupertinoIcons.arrow_right),
               ),
-              ListTile(
+              ExpansionTile(title: Text("Today"),
+              children: [
+
+                InkWell(child: Text("Check In"),
+                onTap: () {
+                  
+                },
+                ),
+                const SizedBox(height: 15,),
+                InkWell(child: Text("data"),
+                onTap: (){
+
+                },
+                ),
+                const SizedBox(height: 15,),
+              ],
+              ),ListTile(
                 leading: const Icon(Icons.person),
                 title: const Text("Profile"),
                 //child: Container(),
@@ -35,7 +50,8 @@ class drawer extends StatelessWidget {
                   Get.to(const profile());
                 },
               trailing: const Icon(CupertinoIcons.arrow_right),
-              ), 
+              ),
+               
               ListTile(
                 leading: const Icon(Icons.person),
                 title: const Text("Logout"),

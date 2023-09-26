@@ -61,60 +61,22 @@ Widget abcd({required String name,required IconData symble,required VoidCallback
                   title: Text("General Settings", style: TextStyle(fontWeight: FontWeight.bold),),
                 ),
                 // const SizedBox(height: 20,),
-                 Card(
-                   child: Container(
-                    child: abcd(name: "My Order",symble: CupertinoIcons.bag_badge_plus, myontap: (){
-                      Get.to(myorder());
-                    }
-                    ),
-                   ),
-                 ),
-                  //const SizedBox(height: 10,),
-                 Card(
-                   child: Container(
-                    child: abcd(name: "Product Price", symble: CupertinoIcons.money_dollar, myontap: (){
-                      Get.to(product());
-                    }),
-                   ),
-                 ),
-                  //const SizedBox(height: 20,),
-                 Card(
-                   child: Container(
-                    child: abcd(name: "Notification", symble: CupertinoIcons.bell, myontap: (){
-                      Get.to(notification());
-                    }),
-                   ),
-                 ),
-                 //const SizedBox(height: 20,),
-                 Card(
-                   child: Container(
-                    child: abcd(name: "About Us", symble: CupertinoIcons.app_badge, myontap: (){
-                      Get.to(about());
-                    }),
-                   ),
-                 ),
-                 //const SizedBox(height: 20,),
-                 Card(
-                   child: Container(
-                    child: abcd(name: "App Update", symble: CupertinoIcons.app_badge, myontap: (){
-                      Get.to(appupdate());
-                    }),
-                   ),
-                 ),
-                 Card(
-                   child: Container(
-                    child: abcd(name: "App Update", symble: CupertinoIcons.app_badge, myontap: (){
-                      Get.to(appupdate());
-                    }),
-                   ),
-                 ),
-                 Card(
-                   child: Container(
-                    child: abcd(name: "App Update", symble: CupertinoIcons.app_badge, myontap: (){
-                      Get.to(appupdate());
-                    }),
-                   ),
-                 ),
+                 abcd(name: "My Order", symble: CupertinoIcons.bag_badge_plus, myontap: (){
+                  Get.to(myorder());
+                 }),
+                 abcd(name: "Product Price", symble: CupertinoIcons.money_dollar, myontap: (){
+                  Get.to(product());
+                 }),
+                abcd(name: "Notification", symble: CupertinoIcons.bell, myontap:(){
+                  Get.to(notification());
+                }),
+                abcd(name: "About Us", symble: CupertinoIcons.app_badge, myontap: (){
+                  Get.to(about());
+                }),
+                abcd(name: "App Update", symble: CupertinoIcons.app_badge, myontap: (){
+                  Get.to(appupdate());
+                }),
+                abcd(name: "Log Out", symble: CupertinoIcons.app_badge, myontap: (){})
               ]  
             ),
           ),
