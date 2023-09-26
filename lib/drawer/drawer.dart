@@ -17,15 +17,6 @@ class drawer extends StatelessWidget {
           child: ListView(
             children: [
               const SizedBox(height: 40),
-              ListTile(
-                leading: const Icon(Icons.person),
-                title: const Text("Check In"),
-                //child: Container(),
-                onTap: (){
-                  //Get.to(profile());
-                },
-              trailing: const Icon(CupertinoIcons.arrow_right),
-              ),
               ExpansionTile(title: Text("Today"),
               children: [
 
@@ -35,7 +26,7 @@ class drawer extends StatelessWidget {
                 },
                 ),
                 const SizedBox(height: 15,),
-                InkWell(child: Text("data"),
+                InkWell(child: Text("Check Out"),
                 onTap: (){
 
                 },
