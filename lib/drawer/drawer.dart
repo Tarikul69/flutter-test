@@ -44,8 +44,17 @@ class drawer extends StatelessWidget {
               ),
                
               ListTile(
-                leading: const Icon(Icons.person),
-                title: const Text("Logout"),
+                leading: const Icon(Icons.home_filled),
+                title: const Text("Home Location"),
+                //child: Container(),
+                onTap: (){
+                 // Get.to(const profile());
+                },
+              trailing: const Icon(CupertinoIcons.arrow_right),
+              ),
+              ListTile(
+                leading: const Icon(Icons.home_filled),
+                title: const Text("Home Location"),
                 //child: Container(),
                 onTap: (){
                  // Get.to(const profile());

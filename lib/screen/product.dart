@@ -15,6 +15,9 @@ class product extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
+                CircleAvatar(
+                  backgroundImage: AssetImage("kdjvff"),
+                ),
                 Text(name, style:TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
                 Text(price, style: TextStyle(),),
                 Text(link, style: TextStyle(),),
