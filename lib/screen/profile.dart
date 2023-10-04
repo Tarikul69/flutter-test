@@ -1,6 +1,10 @@
+import 'dart:js_interop';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test/home.dart';
 import 'package:test/screen/about.dart';
 import 'package:test/screen/appupdate.dart';
 import 'package:test/screen/myorder.dart';
@@ -10,11 +14,12 @@ import 'package:test/screen/product.dart';
 
 class profile extends StatelessWidget {
   const profile({super.key});
-
+ 
   //Card
 Widget abcd({required String name,required IconData symble,required VoidCallback myontap}) {
   
    return Container(
+    
                 decoration: const BoxDecoration(
                   boxShadow: [
                     
@@ -76,7 +81,9 @@ Widget abcd({required String name,required IconData symble,required VoidCallback
                 abcd(name: "App Update", symble: CupertinoIcons.app_badge, myontap: (){
                   Get.to(appupdate());
                 }),
-                abcd(name: "Log Out", symble: CupertinoIcons.app_badge, myontap: (){})
+                abcd(name: "Log Out", symble: CupertinoIcons.app_badge, myontap: (){
+                  Get.to(Home());
+                })
               ]  
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test/home.dart';
 import 'package:test/screen/profile.dart';
 
 class drawer extends StatelessWidget {
@@ -58,6 +59,15 @@ class drawer extends StatelessWidget {
                 //child: Container(),
                 onTap: (){
                  // Get.to(const profile());
+                },
+              trailing: const Icon(CupertinoIcons.arrow_right),
+              ),
+              ListTile(
+                leading: const Icon(Icons.home_filled),
+                title: const Text("Log Out"),
+                //child: Container(),
+                onTap: (){
+                  Get.to(const drawer());
                 },
               trailing: const Icon(CupertinoIcons.arrow_right),
               ),
