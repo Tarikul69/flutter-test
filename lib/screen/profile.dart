@@ -4,44 +4,57 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test/controller/profileontroller.dart';
 import 'package:test/home.dart';
 import 'package:test/screen/about.dart';
 import 'package:test/screen/appupdate.dart';
 import 'package:test/screen/myorder.dart';
 import 'package:test/screen/notification.dart';
 import 'package:test/screen/product.dart';
-
+import 'package:http/http.dart' as http;
 
 class profile extends StatelessWidget {
-  const profile({super.key});
- 
+   profile({super.key});
+
+String img = "http://192.168.0.115/myemployee/";
   //Card
-Widget abcd({required String name,required IconData symble,required VoidCallback myontap}) {
-  
-   return Container(
-    
-                decoration: const BoxDecoration(
-                  boxShadow: [
-                    
-                  ]
-                ),
-                 child:  ListTile(
-                  title: InkWell(
-                    onTap: myontap,
-                    child: Text(name.toString(), style: const TextStyle(fontWeight: FontWeight.bold),
-                    )
-                      ),
-                  //subtitle: Text("data"),
-                  leading:  Icon(symble, color: Colors.grey,),
-                  trailing: const Icon(Icons.arrow_forward, color: Colors.grey,),
-                 ),
-               );
-}
+  Widget abcd(
+      { required String name,
+        required IconData symble,
+        required VoidCallback myontap}) {
+        return Container(
+      decoration: const BoxDecoration(boxShadow: []),
+      child: ListTile(
+        title: InkWell(
+            onTap: myontap,
+            child: Text(
+              name.toString(),
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            )),
+        //subtitle: Text("data"),
+        leading: Icon(
+          symble,
+          color: Colors.grey,
+        ),
+        trailing: const Icon(
+          Icons.arrow_forward,
+          color: Colors.grey,
+        ),
+      ),
+    );
+  }
+
+//Fetch Data from API
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-        appBar: AppBar(
+    Get.put(profilrController());
+    return GetBuilder<profilrController>(
+      builder: (pppp) {
+        String imgurl=img.toString() +pppp.profile[0].photo.toString();
+        print(imgurl);
+        return Scaffold(
+          appBar: AppBar(
           title: const Text("Profile Settings"),
         ),
         body: SingleChildScrollView(
@@ -50,15 +63,21 @@ Widget abcd({required String name,required IconData symble,required VoidCallback
             child: Column(
               children: [
                 const SizedBox(height: 30),
-                const CircleAvatar(
-                  backgroundImage: NetworkImage("url"), 
+                 CircleAvatar(
+                  backgroundImage: NetworkImage('http://192.168.0.115/myemployee/public/employee/noimage.jpg'), 
                   radius: 70,
+                 
                 ),
                 const SizedBox(height: 5,),
-                const Center(
+                 Center(
                   child: ListTile(
-                    title: Text("Kazi Md Tarikul Imam", textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
-                    //subtitle: Text("tarikulabir931@gmail.com"),
+                    title: Text(pppp.profile[0].name.toString(), textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+                  subtitle: Column(
+                    children: [
+                      Text(pppp.profile[0].email.toString(), textAlign: TextAlign.center,),
+                      Text(pppp.profile[0].address.toString(), textAlign: TextAlign.center,),
+                    ],
+                  )
                   ),
                 ),
                 const SizedBox(height: 15,),
@@ -88,6 +107,8 @@ Widget abcd({required String name,required IconData symble,required VoidCallback
             ),
           ),
         )
+        );
+      },
     );
   }
 }

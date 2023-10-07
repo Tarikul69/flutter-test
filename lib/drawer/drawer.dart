@@ -39,7 +39,7 @@ class drawer extends StatelessWidget {
                 title: const Text("Profile"),
                 //child: Container(),
                 onTap: (){
-                  Get.to(const profile());
+                  Get.to(profile());
                 },
               trailing: const Icon(CupertinoIcons.arrow_right),
               ),

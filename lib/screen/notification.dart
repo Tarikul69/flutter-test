@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
 class notification extends StatelessWidget {
@@ -59,7 +60,16 @@ class notification extends StatelessWidget {
                 Column(
                   children: [
                     for(int i=0; i<10; i++)
-                      notificationcart(title: "Title", title1: "title1", date: "09/20/2023")
+                  InkWell(
+                    onTap: (){
+                      Get.bottomSheet(
+                        Container(
+                          child: Text("Bangladesh"),
+                        )
+                      );
+                    },
+                    child: notificationcart(title: "Title", title1: "title1", date: "09/20/2023")
+                    )
                   ],
                 ),
               ],
