@@ -11,8 +11,7 @@ import 'package:test/screen/appupdate.dart';
 import 'package:test/screen/myorder.dart';
 import 'package:test/screen/notification.dart';
 import 'package:test/screen/product.dart';
-import 'package:http/http.dart' as http;
-
+ 
 class profile extends StatelessWidget {
    profile({super.key});
 
