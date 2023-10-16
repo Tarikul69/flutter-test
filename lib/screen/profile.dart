@@ -1,6 +1,5 @@
 import 'dart:js_interop';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -63,43 +62,75 @@ String img = "http://192.168.0.115/myemployee/";
               children: [
                 const SizedBox(height: 30),
                  CircleAvatar(
-                  backgroundImage: NetworkImage('http://192.168.0.115/myemployee/public/employee/noimage.jpg'), 
+                    backgroundImage: NetworkImage(
+                        'http://192.168.0.115/myemployee/public/employee/noimage.jpg'), 
                   radius: 70,
                  
                 ),
                 const SizedBox(height: 5,),
                  Center(
                   child: ListTile(
-                    title: Text(pppp.profile[0].name.toString(), textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+                        title: Text(
+                          pppp.profile[0].name.toString(),
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                   subtitle: Column(
                     children: [
-                      Text(pppp.profile[0].email.toString(), textAlign: TextAlign.center,),
-                      Text(pppp.profile[0].address.toString(), textAlign: TextAlign.center,),
+                            Text(
+                              pppp.profile[0].email.toString(),
+                              textAlign: TextAlign.center,
+                            ),
+                            Text(
+                              pppp.profile[0].address.toString(),
+                              textAlign: TextAlign.center,
+                            ),
                     ],
                   )
                   ),
                 ),
                 const SizedBox(height: 15,),
                 const ListTile(
-                  title: Text("General Settings", style: TextStyle(fontWeight: FontWeight.bold),),
+                    title: Text(
+                      "General Settings",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                 ),
                 // const SizedBox(height: 20,),
-                 abcd(name: "My Order", symble: CupertinoIcons.bag_badge_plus, myontap: (){
+                  abcd(
+                      name: "My Order",
+                      symble: CupertinoIcons.bag_badge_plus,
+                      myontap: () {
                   Get.to(myorder());
                  }),
-                 abcd(name: "Product Price", symble: CupertinoIcons.money_dollar, myontap: (){
+                  abcd(
+                      name: "Product Price",
+                      symble: CupertinoIcons.money_dollar,
+                      myontap: () {
                   Get.to(product());
                  }),
-                abcd(name: "Notification", symble: CupertinoIcons.bell, myontap:(){
+                  abcd(
+                      name: "Notification",
+                      symble: CupertinoIcons.bell,
+                      myontap: () {
                   Get.to(notification());
                 }),
-                abcd(name: "About Us", symble: CupertinoIcons.app_badge, myontap: (){
+                  abcd(
+                      name: "About Us",
+                      symble: CupertinoIcons.app_badge,
+                      myontap: () {
                   Get.to(about());
                 }),
-                abcd(name: "App Update", symble: CupertinoIcons.app_badge, myontap: (){
+                  abcd(
+                      name: "App Update",
+                      symble: CupertinoIcons.app_badge,
+                      myontap: () {
                   Get.to(appupdate());
                 }),
-                abcd(name: "Log Out", symble: CupertinoIcons.app_badge, myontap: (){
+                  abcd(
+                      name: "Log Out",
+                      symble: CupertinoIcons.app_badge,
+                      myontap: () {
                   Get.to(Home());
                 })
               ]  
